@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đạt - Freelancer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="hero">
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <h1>Hi, I am Dat</h1>
+            <p>"Conquering technology, limitless creativity"</p>
+            <a href="#about" class="btn">Explore</a>
+        </div>
+    </div>
+
+    <div class="clock" id="clock"></div>
+
+    <section id="about" class="about">
+        <h2>About Me</h2>
+        <p>I am Dat, a freelancer who does a bit of everything. From web development to creative design, I love exploring different areas of technology and bringing ideas to life.</p>
+    </section>
+
+    <section class="profile">
+        <h2>Personal Info</h2>
+        <ul class="profile-info">
+            <li><strong>Sleep:</strong> at Snapfood - Healthy Food and Beauty</li>
+            <li><strong>Studied Sleep:</strong> at University of Science, Vietnam National University, Hanoi</li>
+            <li><strong>Went to:</strong> Vietnam - Poland High School</li>
+            <li><strong>Lives in:</strong> Hanoi, Vietnam</li>
+            <li><strong>Relationship status:</strong> Single</li>
+            <li><strong>Portfolio:</strong> <a href="https://dattranmakhtn.github.io/profile" target="_blank">dattranmakhtn.github.io/profile</a></li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>© 2024 Đạt - Freelancer. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        function updateClock() {
+            const now = new Date();
+            const hours = String(now.getHours()).padStart(2, '0');
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+            const seconds = String(now.getSeconds()).padStart(2, '0');
+            document.getElementById('clock').textContent = `${hours}:${minutes}:${seconds}`;
+        }
+        setInterval(updateClock, 1000);
+        updateClock(); // Initial call to display clock immediately
+    </script>
+</body>
+</html>
